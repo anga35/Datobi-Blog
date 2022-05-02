@@ -1,0 +1,52 @@
+header{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+
+
+}
+html, body {
+    margin:0;
+    padding:0;
+
+}
+.nav_links li a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+}
+
+
+#brand{
+
+margin-right: 100px;
+
+}
+
+
+h1{
+    font-family: RadioCanada;
+}
+
+a{
+
+text-decoration: none;
+color: black;
+
+}
+
+.nav_links li{
+display: inline-block;
+padding-left: 40px;
+padding-right: 40px;
+font-family: RadioCanada;
+
+}
+
+@font-face {
+    font-family: RadioCanada;
+    src: url("/static/fonts/RadioCanada-Regular.ttf");
+}
+
+
