@@ -5,9 +5,15 @@ header{
 
 
 }
+
+
 html, body {
     margin:0;
     padding:0;
+background-color: rgb(249, 249, 249);
+
+width: auto;
+height: auto;
 
 }
 .nav_links li a{
@@ -24,6 +30,14 @@ margin-right: 100px;
 
 }
 
+header{
+    background-color: white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 10px 10px 35px rgb(212, 212, 212);
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 h1{
     font-family: RadioCanada;
@@ -35,6 +49,32 @@ text-decoration: none;
 color: black;
 
 }
+
+
+.header-text{
+
+
+text-align: center;
+animation: mymove 1s;
+
+}
+
+#main_header{
+text-shadow: 10px 10px 10px rgb(212, 212, 212);
+
+
+}
+
+@keyframes mymove {
+    0%{transform: translateX(10%);}
+   100% {transform: translateX(0%)};
+}
+
+/* @keyframes postHeader {
+    0%{transform: translateX(-1);}
+} */
+
+
 
 .nav_links li{
 display: inline-block;

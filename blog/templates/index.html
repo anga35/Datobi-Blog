@@ -7,8 +7,7 @@
 <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 <link rel="stylesheet" href="{% static 'js/bootstrap.min.js' %}"> -->
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-
-
+<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
 </head>
 
 
@@ -22,9 +21,9 @@
 
 <ul class="nav_links">
 
-    <li><a href="#">Services</a></li>
     <li><a href="#">Projects</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="#">About me</a></li>
+    <li><a href="#">Contact</a></li>
 
 
 
@@ -36,9 +35,26 @@
 
 
 </header>
+<div class="header-text">
 
 
-<h1>Hiii</h1>
+    <h1 style="font-size: 100px; " id="main_header">
+        Welcome<br>To My<br>Blog
+        </h1>
+
+
+    
+            
+        
+</div>
+
+
+
+<h1 style="font-size: 70px; margin:100px" >Posts</h1>
+
 </body>
+
+
+<script src="{% static 'js/blog.js' %}"></script>
 
 </html>
