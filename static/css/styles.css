@@ -10,7 +10,7 @@ header{
 html, body {
     margin:0;
     padding:0;
-background-color: rgb(249, 249, 249);
+background-color: #fafafa;
 
 width: auto;
 height: auto;
@@ -25,12 +25,21 @@ height: auto;
 
 
 h5{
-    font-family: RadioCanada;
-color: rgb(80, 80, 80);
+    font-family:Lato-Light;
+color: #2b2b2b;
+font-size: 20px;
+
 }
 h3{
-    font-family: RadioCanada-Bold;
-color: rgb(32, 32, 32);
+    font-family: Lato;
+color: #1b1b1b;
+font-size: 30px;
+
+}
+
+p{
+    font-family: Lato-Light;
+    font-size: 20px
 }
 
 #brand{
@@ -57,23 +66,23 @@ width: max-content;
 
 margin-left: 70px;
 
-border-style: solid;
+/* border-style: solid;
 border-width: 2px;
 border-color: rgb(245, 245, 245);
-border-radius: 5px;
+border-radius: 5px; */
 }
 
 header{
     background-color: white;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    box-shadow: 10px 10px 35px rgb(212, 212, 212);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 10px 10px 35px rgba(212, 212, 212, 0.352);
     margin-left: 10px;
     margin-right: 10px;
 }
 
 h1{
-    font-family: RadioCanada-Bold;
+    font-family: Lato-Bold;
 }
 
 a{
@@ -86,7 +95,7 @@ color: black;
 
 .header-text{
 
-
+display: block;
 
 animation: mymove 1.5s;
 
@@ -117,7 +126,7 @@ animation: mymove 1.5s;
 display: inline-block;
 padding-left: 40px;
 padding-right: 40px;
-font-family: RadioCanada;
+font-family: Lato-Bold;
 
 }
 
@@ -127,13 +136,23 @@ font-family: RadioCanada;
     }
 
 
+
+
+
 @font-face {
-    font-family: RadioCanada;
-    src: url("/static/fonts/RadioCanada-Regular.ttf");
-}
-@font-face {
-    font-family: RadioCanada-Bold;
-    src: url("/static/fonts/RadioCanada-Bold.ttf");
+    font-family: Lato-Bold;
+    src: url("/static/fonts/Lato-Bold.ttf");
 }
 
+
+
+@font-face {
+    font-family: Lato;
+    src: url("/static/fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+    font-family: Lato-Light;
+    src: url("/static/fonts/Lato-Light.ttf");
+}
 

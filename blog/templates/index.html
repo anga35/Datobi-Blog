@@ -12,8 +12,12 @@
 
 
 <body>
-    
-<header>
+    <img src="{% static 'david-unsplash.jpg' %}" style="object-fit:fill; height: 100%; width:100%;position: absolute;  
+  " alt="">  
+<header style="position: relative;">
+
+  
+
 <h1 id="brand" class="post-header-div" style="color: rgb(148, 35, 35);"> <a href="#d">Code with Datobi</a> </h1>
 
 <nav >
@@ -36,13 +40,13 @@
 
 </header>
 
-<div class='header-bg ' style="position: relative; height:100%"  >
+<div class='header-bg ' style=" height:90%"  >
 
-<img src="{% static 'david-unsplash.jpg' %}" style="object-fit:cover; height: 100%; width:100%;position: absolute;  
-width: 100%;" alt="">
+<!-- <img src="{% static 'david-unsplash.jpg' %}" style="object-fit:cover; height: 100%; width:100%;position: absolute;  
+width: 100%;" alt=""> -->
 
 
-    <div class="header-text" >
+    <div class="header-text"  >
 
 
         <h1 style="font-size: 80px;   position: relative; 
@@ -52,7 +56,12 @@ width: 100%;" alt="">
             Welcome<br>To My<br>Blog
             </h1>
     
-    
+            <p style="font-size: 80px;   position: relative; 
+            
+            left: 500; 
+            width: 100%;" id="main_header">
+                I'm using this <br>website to portray <br>my personal projects
+        </p>
         
                 
             
@@ -63,7 +72,7 @@ width: 100%;" alt="">
 
 
 
-<div class="post-header-div" style="position: relative; align-self: flex-end;">
+<div class="post-header-div" style="position: relative; ">
     <h1 style="font-size: 50px; margin-left:100px; color: rgb(55, 55, 55);" >Posts</h1>
 </div>
 
@@ -71,52 +80,54 @@ width: 100%;" alt="">
 
 
 
-<div style="display: grid; grid-template-columns: 1fr 1fr;" >
+<div style="display: flex; flex-direction: column;  " >
 
 
     
-<div class="post-item" style="display: block;" >
-    <h5 style="margin-left: 30px;">David Ayodele</h5>
+<div class="post-item" style="display: flex; flex-direction: row;" >
+
+    <div style="display:block">
+        <h5 style="margin-left: 30px;">David Ayodele</h5>
  
-    <h3 style=" margin-left: 30px;">My first Project</h3>
+        <h3 style=" margin-left: 30px; width: 500px">My first Project dddddddddddddddddddddddd</h3>
+
+
+        <p style="margin-left: 30px;">Damn this som lame as shiiit vkfnvifnvfiovmfosdvdsvs</p>
+
+    </div>
+  
    
-    <img src="{% static 'code-snapshot.PNG' %}" style=" width: 500px; height: 300px; margin: 10px; "alt=" " >
+    <img src="{% static 'code-snapshot.PNG' %}" style="object-fit: contain; width: 400px;  margin: 10px; "alt=" " >
     
     
     </div>
 
 
     
-    <div class="post-item" style="display: block;" >
-   
-        <h5 style="margin-left: 30px;">Author</h5>
+    <div class="post-item" style="display: flex; flex-direction: row;" >
+
+        <div style="display:block; column-gap: 0px;">
+            <h5 style="margin-left: 30px;">David Ayodele</h5>
+     
+            <h3 style=" margin-left: 30px; width: 500px">My first Project dddddddddddddddddddddddd</h3>
     
-        <h3 style=" margin-left: 30px;">Title</h3>
-
-   
-        
-        <h3 style=" margin-left: 30px;">content</h3>
-
-
-        <img src="{% static 'code-snapshot.PNG' %}" style=" width: 500px; height: 300px; margin: 10px; "alt=" " >
+    
+            <p style="margin-left: 30px;">Damn this som lame as shiiit vkfnvifnvfiovmfosdvdsvs</p>
+    
         </div>
+      
+       
+        <img src="{% static 'code-snapshot.PNG' %}" style="object-fit: contain; width: 400px;  margin: 10px; "alt=" " >
+        
+        
+        </div>
+
+
+<br>
     
+  
 
          
-    <div class="post-item" style="display: block;" >
-   
-        <h5 style="margin-left: 30px;">Author</h5>
-    
-        <h3 style=" margin-left: 30px;">Title</h3>
-
-   
-        
-        <h3 style=" margin-left: 30px;">content</h3>
-
-
-        <img src="{% static 'code-snapshot.PNG' %}" style=" width: 500px; height: 300px; margin: 10px; "alt=" " >
-        </div>
-
 </div>
 
 
