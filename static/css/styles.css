@@ -14,7 +14,7 @@ background-color:#eceff1;
 
 width: auto;
 height: auto;
-
+scroll-behavior: smooth;
 }
 .nav_links li a{
     list-style: none;
@@ -97,7 +97,7 @@ color: black;
 
 display: block;
 
-animation: mymove 1.5s;
+animation: mymove 5s;
 
 }
 
@@ -109,17 +109,17 @@ animation: mymove 1.5s;
 }
 
 @keyframes mymove {
-    0%{transform: translateX(10%);}
+    0%{transform: translateX(2%);}
    100% {transform: translateX(0%)};
 }
 
 @keyframes postHeader {
-    0%{transform: translateX(-10%);}
+    0%{transform: translateX(-2%);}
     100%{transform:translateX(0%)}
 }
 
 .post-header-div{
-    animation: postHeader 1.5s;
+    animation: postHeader 5s;
 }
  
 .nav_links li{

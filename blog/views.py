@@ -3,11 +3,9 @@ from blog.models import Post
 from pyexpat import model
 from tempfile import template
 from django.shortcuts import render
-from django.views.generic import TemplateView,DetailView,CreateView
+from django.views.generic import TemplateView,DetailView,CreateView,ListView
 
 # Create your views here.
-class IndexView(TemplateView):
-    template_name='index.html'
 
 
 
@@ -16,5 +14,7 @@ class PostDetailView(DetailView):
 
 
 
-class PostListView(CreateView):
+class PostListView(ListView):
+    
     model=Post
+    

@@ -25,7 +25,7 @@
 
 <ul class="nav_links">
 
-    <li><a href="#">Projects</a></li>
+    <li><a href="#post-header-div">Projects</a></li>
     <li><a href="#">About me</a></li>
     <li><a href="#">Contact</a></li>
 
@@ -50,13 +50,13 @@ width: 100%;" alt=""> -->
 
 
         <h1 style="font-size: 80px;   position: relative; 
-        top: 200px; 
+        top: 10px; 
         left: 100; 
         width: 100%;" id="main_header">
             Welcome<br>To My<br>Blog
             </h1>
     
-            <p style="font-size: 60px;   position: relative; 
+            <p style="font-size: 50px;   position: relative; 
             
             left: 500; 
             width: 100%;" id="main_header">
@@ -72,7 +72,7 @@ width: 100%;" alt=""> -->
 
 
 
-<div class="post-header-div" style="position: relative; ">
+<div class="post-header-div" style="position: relative; "id='post-header-div'>
     <h1 style="font-size: 50px; margin-left:100px; color: rgb(55, 55, 55);" >Posts</h1>
 </div>
 
@@ -84,47 +84,39 @@ width: 100%;" alt=""> -->
 
 
     
-<div class="post-item" style="display: flex; flex-direction: row;" >
+    {% for post in object_list %}
 
-    <div style="display:block">
-        <h5 style="margin-left: 30px;">David Ayodele</h5>
- 
-        <h3 style=" margin-left: 30px; width: 500px">My first Project dddddddddddddddddddddddd</h3>
-
-
-        <p style="margin-left: 30px;">Damn this som lame as shiiit vkfnvifnvfiovmfosdvdsvs</p>
-
-    </div>
   
-   
-    <img src="{% static 'code-snapshot.PNG' %}" style="object-fit: contain; width: 400px;  margin: 10px; "alt=" " >
-    
-    
-    </div>
-
-
-    
-    <br>
-
-
     <div class="post-item" style="display: flex; flex-direction: row;" >
 
         <div style="display:block">
-            <h5 style="margin-left: 30px;">David Ayodele</h5>
+            <h5 style="margin-left: 30px;">{{post.author}}</h5>
      
-            <h3 style=" margin-left: 30px; width: 500px">My first Project dddddddddddddddddddddddd</h3>
+            <h3 style=" margin-left: 30px; width: 500px">{{post.title}}</h3>
     
     
-            <p style="margin-left: 30px;">Damn this som lame as shiiit vkfnvifnvfiovmfosdvdsvs</p>
+            <p style="margin-left: 30px;">{{post.content}}</p>
     
         </div>
       
        
-        <img src="{% static 'code-snapshot.PNG' %}" style="object-fit: contain; width: 400px;  margin: 10px; "alt=" " >
+        <img src="{{post.image.url}}" style="object-fit: contain; width: 400px;  margin: 10px; "alt=" " >
         
         
         </div>
     
+    
+        
+        <br>
+
+        
+    {% endfor %}
+        
+
+  
+
+
+   
 
     
   
