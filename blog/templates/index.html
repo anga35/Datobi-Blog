@@ -14,7 +14,7 @@
 <body>
     
 <header>
-<h1 id="brand"> <a href="#d">Code with Datobi</a> </h1>
+<h1 id="brand" class="post-header-div" style="color: rgb(148, 35, 35);"> <a href="#d">Code with Datobi</a> </h1>
 
 <nav >
 
@@ -35,22 +35,91 @@
 
 
 </header>
-<div class="header-text">
+
+<div class='header-bg ' style="position: relative; height:100%"  >
+
+<img src="{% static 'david-unsplash.jpg' %}" style="object-fit:cover; height: 100%; width:100%;position: absolute;  
+width: 100%;" alt="">
 
 
-    <h1 style="font-size: 100px; " id="main_header">
-        Welcome<br>To My<br>Blog
-        </h1>
+    <div class="header-text" >
 
 
+        <h1 style="font-size: 80px;   position: relative; 
+        top: 200px; 
+        left: 100; 
+        width: 100%;" id="main_header">
+            Welcome<br>To My<br>Blog
+            </h1>
     
-            
+    
         
+                
+            
+    </div>
+
 </div>
 
 
 
-<h1 style="font-size: 70px; margin:100px" >Posts</h1>
+
+<div class="post-header-div" style="position: relative; align-self: flex-end;">
+    <h1 style="font-size: 50px; margin-left:100px; color: rgb(55, 55, 55);" >Posts</h1>
+</div>
+
+
+
+
+
+<div style="display: grid; grid-template-columns: 1fr 1fr;" >
+
+
+    
+<div class="post-item" style="display: block;" >
+    <h5 style="margin-left: 30px;">David Ayodele</h5>
+ 
+    <h3 style=" margin-left: 30px;">My first Project</h3>
+   
+    <img src="{% static 'code-snapshot.PNG' %}" style=" width: 500px; height: 300px; margin: 10px; "alt=" " >
+    
+    
+    </div>
+
+
+    
+    <div class="post-item" style="display: block;" >
+   
+        <h5 style="margin-left: 30px;">Author</h5>
+    
+        <h3 style=" margin-left: 30px;">Title</h3>
+
+   
+        
+        <h3 style=" margin-left: 30px;">content</h3>
+
+
+        <img src="{% static 'code-snapshot.PNG' %}" style=" width: 500px; height: 300px; margin: 10px; "alt=" " >
+        </div>
+    
+
+         
+    <div class="post-item" style="display: block;" >
+   
+        <h5 style="margin-left: 30px;">Author</h5>
+    
+        <h3 style=" margin-left: 30px;">Title</h3>
+
+   
+        
+        <h3 style=" margin-left: 30px;">content</h3>
+
+
+        <img src="{% static 'code-snapshot.PNG' %}" style=" width: 500px; height: 300px; margin: 10px; "alt=" " >
+        </div>
+
+</div>
+
+
 
 </body>
 

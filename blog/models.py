@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from operator import mod
 from django.db import models
 from psycopg2 import Timestamp
@@ -10,7 +11,7 @@ class Post(models.Model):
     author=models.CharField(max_length=50)
     date_created=models.DateTimeField(auto_now_add=True)
     publish_date=models.DateTimeField(null=True,default=None)
-    
+    image=models.ImageField(upload_to='post_thumbnail')
 
     def publish(self):
         self.publish_date=timezone.now()
