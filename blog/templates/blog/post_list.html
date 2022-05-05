@@ -12,62 +12,67 @@
 
 
 <body>
-    <img src="{% static 'david-unsplash.jpg' %}" style="object-fit:fill; height: 100%; width:100%;position: absolute;  
-  " alt="">  
-<header style="position: relative;">
 
-  
-
-<h1 id="brand" class="post-header-div" style="color: rgb(148, 35, 35);"> <a href="#d">Code with Datobi</a> </h1>
-
-<nav >
-
-
-<ul class="nav_links">
-
-    <li><a href="#post-header-div">Projects</a></li>
-    <li><a href="#">About me</a></li>
-    <li><a href="#">Contact</a></li>
-
-
-
-</ul>
-
-
-</nav>
-
-
-
-</header>
-
-<div class='header-bg ' style=" height:90%"  >
-
-<!-- <img src="{% static 'david-unsplash.jpg' %}" style="object-fit:cover; height: 100%; width:100%;position: absolute;  
-width: 100%;" alt=""> -->
-
-
-    <div class="header-text"  >
-
-
-        <h1 style="font-size: 80px;   position: relative; 
-        top: 10px; 
-        left: 100; 
-        width: 100%;" id="main_header">
-            Welcome<br>To My<br>Blog
-            </h1>
-    
-            <p style="font-size: 50px;   position: relative; 
-            
-            left: 500; 
-            width: 100%;" id="main_header">
-                I'm using this <br>website to portray <br>my personal projects
-        </p>
+    <div style="position: relative; height: 50rem;">
+        <img src="{% static 'david-unsplash.jpg' %}" style="object-fit:fill; height: 100%; width:100%;position: absolute;  
+        " alt="">  
+      <header style="position: relative;">
+      
         
-                
-            
-    </div>
+      
+      <h1 id="brand" class="post-header-div" style="color: rgb(148, 35, 35);"> <a href="#d"> Datobi</a> </h1>
+      
+      <nav >
+      
+      
+      <ul class="nav_links">
+      
+          <li><a href="#post-header-div">Posts</a></li>
+          <li><a href="#">Create</a></li>
+          <li><a href="#">Contact</a></li>
+      
+      
+      
+      </ul>
+      
+      
+      </nav>
+      
+      
+      
+      </header>
+      
+      <div class='header-bg ' style=" height:90%"  >
+      
+      <!-- <img src="{% static 'david-unsplash.jpg' %}" style="object-fit:cover; height: 100%; width:100%;position: absolute;  
+      width: 100%;" alt=""> -->
+      
+      
+          <div class="header-text"  >
+      
+      
+              <h1 style="font-size: 80px;   position: relative; 
+              top: 10px; 
+              left: 100; 
+              width: 100%;" id="main_header">
+                  Datobi Blog
+                  </h1>
+          
+                  <h3 style="font-size: 40px;   position: relative; 
+                  
+                  left: 500; 
+                  width: 100%;" id="sub_main_header">
+                      Create <br>Edit <br>and Publish high quality posts
+                </h3>
+              
+                      
+                  
+          </div>
+      
+      </div>
 
-</div>
+    </div>
+ 
 
 
 
@@ -89,13 +94,13 @@ width: 100%;" alt=""> -->
   
     <div class="post-item" style="display: flex; flex-direction: row;" >
 
-        <div style="display:block">
-            <h5 style="margin-left: 30px;">{{post.author}}</h5>
+        <div style="display:block; line-height: 10px; margin-left: 30px; width: 500px">
+            <h5  id="post-author">{{post.author}}</h5>
      
-            <h3 style=" margin-left: 30px; width: 500px">{{post.title}}</h3>
+            <h3  id="post-title">{{post.title}}</h3>
     
     
-            <p style="margin-left: 30px;">{{post.content}}</p>
+            <p >{{post.content|safe|escape}}</p>
     
         </div>
       

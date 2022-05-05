@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block body %}
+    
+<div style="margin: 5rem;">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+    
+    
+    
+        {{ form.media }}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+    
+
+</div>
+
+
+{% endblock body %}

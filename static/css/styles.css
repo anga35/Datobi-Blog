@@ -23,14 +23,26 @@ scroll-behavior: smooth;
     font-size: larger;
 }
 
+.home-bg{
+ background-image: url(/static/david-unsplash.jpg);
+ height: 1000px;
+ /* width: 1000px; */
 
-h5{
+}
+
+#sub_main_header{
+
+    font-family:Lato;
+color: white;
+}
+
+#post-author{
     font-family:Lato-Light;
 color: #2b2b2b;
 font-size: 20px;
 
 }
-h3{
+#post-title{
     font-family: Lato;
 color: #1b1b1b;
 font-size: 30px;
@@ -70,6 +82,11 @@ margin-left: 70px;
 border-width: 2px;
 border-color: rgb(245, 245, 245);
 border-radius: 5px; */
+}
+
+
+.form-control{
+    width: 30%;
 }
 
 header{

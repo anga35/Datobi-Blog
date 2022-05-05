@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,17 @@ MEDIA_URL='/media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CKEDITOR_SETTINGS = {
+    'allowedContent': True,
+    'autoParagraph': False,
+    'baseHref': '/media/',
+    'enterMode': 'CKEDITOR.ENTER_BR',
+    'extraAllowedContent': 'style;*;*{*}',
+    'filebrowserImageBrowseUrl': '/filebrowser/',
+    'language': '{{ language }}',
+    'removePlugins': 'stylesheetparser,about,showblocks,language,form,flash,iframe',
+    'skin': 'moonocolor',
+    'toolbar': 'toolbar_Basic',
+}
