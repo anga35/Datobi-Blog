@@ -28,7 +28,7 @@
       <ul class="nav_links">
       
           <li><a href="#post-header-div">Posts</a></li>
-          <li><a href="#">Create</a></li>
+          <li><a href="{% url 'post-create' %}">Create</a></li>
           <li><a href="#">Contact</a></li>
       
       
@@ -91,16 +91,17 @@
     
     {% for post in object_list %}
 
-  
+  <a href="{% url 'post-detail' pk=post.pk %}">
+
     <div class="post-item" style="display: flex; flex-direction: row;" >
 
-        <div style="display:block; line-height: 10px; margin-left: 30px; width: 500px">
+        <div style="display:block; line-height: 20px; margin-left: 30px; width: 500px">
             <h5  id="post-author">{{post.author}}</h5>
      
             <h3  id="post-title">{{post.title}}</h3>
     
     
-            <p >{{post.content|safe|escape}}</p>
+            <p >{{post.content|safe|truncatechars:100}}</p>
     
         </div>
       
@@ -109,6 +110,9 @@
         
         
         </div>
+
+  </a>
+    
     
     
         

@@ -21,6 +21,8 @@ scroll-behavior: smooth;
     text-decoration: none;
     color: black;
     font-size: larger;
+    transition: 0.3s ease-out ;
+
 }
 
 .home-bg{
@@ -37,13 +39,13 @@ color: white;
 }
 
 #post-author{
-    font-family:Lato-Light;
+    font-family:Lato;
 color: #2b2b2b;
-font-size: 20px;
+font-size:  17px;
 
 }
 #post-title{
-    font-family: Lato;
+    font-family: Lato-Bold;
 color: #1b1b1b;
 font-size: 30px;
 
@@ -137,6 +139,7 @@ animation: mymove 5s;
 
 .post-header-div{
     animation: postHeader 5s;
+    font-family: Lato-Bold;
 }
  
 .nav_links li{

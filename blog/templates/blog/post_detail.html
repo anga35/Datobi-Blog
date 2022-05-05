@@ -4,16 +4,21 @@
 
 {% block body %}
     
-<div style="margin: 50px; padding:50px;border: 2px solid red;  ">
+<div style="margin: 10px; padding:30px; ">
 
-    <h5 id="post-author">Marx D.</h5>
 
-    <h3 id="post-title" >9 Great Sites That Will Pay You Over $100 Per Article [Updated]</h3>
+    <div style="margin: 2rem;">
+        <p id="post-author" style="margin-left: 10pxs;">{{object.author}}</p>
+
+        <h3 id="post-title" >{{object.title}}</h3>
+    
+
+    </div>
 
 
     <img src="{% static 'david-unsplash.jpg' %}" style="object-fit: contain; width: 1000px;  margin: 10px; "alt=" " >
 
-    <p>This is a test post to see functions</p>
+    <p>{{object.content|safe}}</p>
 
 </div>
 
