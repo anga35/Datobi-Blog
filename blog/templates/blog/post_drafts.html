@@ -1,0 +1,51 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+
+{% for post in object_list %}
+
+
+
+  <div class="post-item" style="display: flex; flex-direction: row;margin: 3rem;" >
+
+      <div style="display:block; line-height: 20px; margin-left: 30px; width: 500px">
+
+    <h5  id="post-author">{{post.author}}</h5>
+
+
+    <div style="display: inline;">
+        <h3  id="post-title">{{post.title}} 
+             <a href="{% url 'post-publish' pk=post.pk %}"><i class="fa-regular fa-circle-check fa-lg" style="margin-left: 6rem;"></i></a>
+             <a href="#"><i class="fa-regular fa-circle-xmark fa-lg"style="margin-left: 1rem;" ></i></a>
+            </h3>
+       
+    
+    </div>
+
+
+   
+     
+  
+  
+          <p >{{post.content|safe|truncatechars:100}}</p>
+  
+      </div>
+    
+     
+      <img src="{{post.image.url}}" style="object-fit: contain; width: 400px;  margin: 10px; "alt=" " >
+      
+      
+      </div>
+
+
+  
+  
+  
+      
+      <br>
+     
+  {% endfor %}
+{% endblock body %}
