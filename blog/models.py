@@ -20,6 +20,10 @@ class Post(models.Model):
     def __str__(self) -> str:
         return self.title
 
+    def unpublish(self):
+        self.publish_date=None
+        self.save()
+
     def publish(self):
         self.publish_date=timezone.now()
         self.save()
