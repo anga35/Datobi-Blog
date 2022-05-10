@@ -1,0 +1,26 @@
+
+<html>
+
+
+    <head>
+    
+    
+    </head>
+    
+    
+    <body>
+        
+        <div>
+            <form method="POST" >
+              {% csrf_token %}
+              <p>Are you sure you want to delete {{ object }}?</p>
+            
+              <input type="submit" value="Delete">
+            </form>
+          </div>
+    </body>
+    
+    </html>
+    
+    
+    

@@ -1,13 +1,16 @@
 
+
 from typing import Any
 from webbrowser import get
 
 from django.http import HttpRequest, HttpResponse
+from django.urls import  reverse_lazy
+from requests import delete
 from blog.models import Post
 from pyexpat import model
 from tempfile import template
 from django.shortcuts import render
-from django.views.generic import TemplateView,DetailView,CreateView,ListView,UpdateView
+from django.views.generic import TemplateView,DetailView,CreateView,ListView,UpdateView,DeleteView
 from blog.forms import PostForm
 from django.shortcuts import redirect
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -54,8 +57,8 @@ class PostUpdateView(UpdateView):
 
 
     def get(self, request: HttpRequest, *args: Any, **kwargs: Any) -> HttpResponse:
-        self.get_object().title='Buss'
-        self.get_object().unpublish()
+        
+       
         print(self.get_object().publish_date)
         
         
@@ -63,14 +66,14 @@ class PostUpdateView(UpdateView):
 
 
     def post(self, request: HttpRequest, *args: Any, **kwargs: Any) -> HttpResponse:
-        self.get_object().publish_date=None
-        print(self.get_object().publish_date)
-        self.get_object().save()
+        self.get_object().unpublish()
         return super().post(request, *args, **kwargs)
 
 
+class PostDeleteView(LoginRequiredMixin,DeleteView):
+    model=Post
+    success_url=reverse_lazy('post-list')
     
-
 
 def publish(request,**kwargs):
     pk=kwargs['pk']

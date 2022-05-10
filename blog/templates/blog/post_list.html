@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="{% static 'js/bootstrap.min.js' %}"> -->
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
+<script src="https://kit.fontawesome.com/f55e5e3e83.js" crossorigin="anonymous"></script>
 <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
 
 </head>
@@ -93,14 +94,22 @@
     
     {% for post in object_list %}
 
-  <a href="{% url 'post-detail' pk=post.pk %}">
+<div style="display: flex; flex-direction: row; " >
 
-    <div class="post-item" style="display: flex; flex-direction: row;" >
+
+  
+    <div class="post-item" style="display: flex; flex-direction: row; " >
+        <a href="{% url 'post-detail' pk=post.pk %}" style="display: flex; flex-direction: row;" >
+
 
         <div style="display:block; line-height: 20px; margin-left: 30px; width: 500px">
-            <h5  id="post-author">{{post.author}}</h5>
+            <h5  id="post-author" >By {{post.user.fullname}}</h5>
      
-            <h3  id="post-title">{{post.title}}</h3>
+            <div style="display: inline;">
+                <h3  id="post-title">{{post.title}} 
+             
+                    </h3>
+                    </div>
     
     
             <p >{{post.content|safe|truncatechars:100}}</p>
@@ -110,16 +119,25 @@
        
         <img src="{{post.image.url}}" style="object-fit: contain; height: 350px; margin: 10px; "alt=" " >
         
-        
+    </a>
+
+    
         </div>
 
-  </a>
-    
+        {% if post.user == user %}
+       
+    <a href="{% url 'post-update' pk=post.pk %}" style="border:2px solid red; margin: 10rem;">
+        <i class="fa-solid fa-pen fa-3x"></i>
+
+    </a>
+
+    {% endif %}
+</div>
     
     
         
         <br>
-        <i class="fas fa-solid fa-arrows-turn-to-dots"></i>
+ 
     {% endfor %}
         
 
