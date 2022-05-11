@@ -9,5 +9,6 @@ path('create/',PostCreateView.as_view(),name='post-create'),
 path('drafts/',PostDraftsView.as_view(),name='post-drafts'),
 path('publish/<int:pk>/',publish, name='post-publish'),
 path('update/<int:pk>/',PostUpdateView.as_view(), name='post-update'),
-path('delete/<int:pk>/',PostDeleteView.as_view(), name='post-delete')
+path('delete/<int:pk>/',PostDeleteView.as_view(), name='post-delete'),
+
 ]

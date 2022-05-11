@@ -20,7 +20,7 @@ class PostCreateView(LoginRequiredMixin,CreateView):
     model=Post
     form_class=PostForm
     login_url='/login/'
-    redirect_field_name='post_detail.html'
+    redirect_field_name='next'
 
 
 class PostDetailView(DetailView):

@@ -18,7 +18,7 @@ from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.auth import views
-from accounts.views import LoginView
+from accounts.views import LoginView,LogoutView,SignUpView
 
 
 urlpatterns = [
@@ -26,5 +26,6 @@ urlpatterns = [
 
     path('post/',include('blog.urls')),
     path('login/', LoginView.as_view(), name='login'),
-    path('logout/', views.LogoutView.as_view(), name='logout')
+    path('logout/', LogoutView.as_view(), name='logout'),
+    path('signup/',SignUpView.as_view(),name='signup')
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
