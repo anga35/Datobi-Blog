@@ -84,6 +84,10 @@ class PostDeleteView(LoginRequiredMixin,DeleteView):
     
 
 def publish(request,**kwargs):
+    if(not request.user.is_superuser):
+        raise Http404
+
+
     pk=kwargs['pk']
 
     post=Post.objects.get(pk=pk)
