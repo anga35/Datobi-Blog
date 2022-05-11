@@ -3,7 +3,7 @@
 from typing import Any
 from webbrowser import get
 
-from django.http import HttpRequest, HttpResponse
+from django.http import Http404, HttpRequest, HttpResponse
 from django.urls import  reverse_lazy
 from requests import delete
 from blog.models import Post
@@ -40,6 +40,13 @@ class PostListView(ListView):
 class PostDraftsView(ListView):
     model=Post
     template_name='blog/post_drafts.html'
+    
+
+    def get(self,request,*args,**kwargs):
+        if(not request.user.is_superuser):
+            raise Http404
+
+        return super().get(self, request, *args, **kwargs)
 
 
 

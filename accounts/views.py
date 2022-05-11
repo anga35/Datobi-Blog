@@ -17,8 +17,12 @@ class LoginView(View):
             return redirect('post-list')
         
         signup_url=''
-        next_url=request.GET['next']
-        if next_url:
+        try:
+            next_url=request.GET['next']
+        except:
+            pass
+
+        else:
             signup_url=reverse('signup')
             print(next_url)
             param=urlencode({'next':next_url})
