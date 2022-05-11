@@ -66,7 +66,8 @@ class PostUpdateView(UpdateView):
 
 
     def post(self, request: HttpRequest, *args: Any, **kwargs: Any) -> HttpResponse:
-        self.get_object().unpublish()
+        if( not request.user.is_superuser):
+            self.get_object().unpublish()
         return super().post(request, *args, **kwargs)
 
 
