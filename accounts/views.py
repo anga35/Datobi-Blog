@@ -1,4 +1,6 @@
 import email
+import re
+from urllib.parse import urlencode
 from django.urls import reverse
 from django.shortcuts import render,redirect
 from django.views.generic import FormView,View
@@ -12,9 +14,21 @@ class LoginView(View):
 
     def get(self,request,**kwargs):
         if request.user.is_authenticated:
-            raise Http404
+            return redirect('post-list')
+        
+        signup_url=''
+        next_url=request.GET['next']
+        if next_url:
+            signup_url=reverse('signup')
+            print(next_url)
+            param=urlencode({'next':next_url})
+            signup_url=f'{signup_url}?{param}'
 
-        return render(request,'account_login.html')
+            print(signup_url)
+
+        
+
+        return render(request,'account_login.html',context={'next_url':signup_url})
 
 
     def post(self,request,**kwargs):
@@ -68,7 +82,19 @@ class SignUpView(View):
 
             login(request,user)
 
-            redirect(reverse('post-list'))
+            redirect_url=reverse('post-list')
+            try:
+                next_url=request.GET['next']
+            except:
+                pass
+            
+            else:
+                redirect_url=next_url
+
+
+
+
+            return redirect(redirect_url)
 
             
 

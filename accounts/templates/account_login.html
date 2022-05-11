@@ -28,7 +28,18 @@
 
     </form>
 
-    <p>Don't have an account yet?,Signup <a href="{% url 'signup' %}">here</a> </p>
+
+    
+    {% if next_url %}
+    <p>Don't have an account yet?,Signup <a href={{next_url}}>here</a> </p>
+
+        {% else %}
+        <p>Don't have an account yet?,Signup <a href="{% url 'signup' %}">here</a> </p>
+
+    {% endif %}
+        
+
+    
 
 
 

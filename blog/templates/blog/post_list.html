@@ -33,7 +33,17 @@
           <li><a href="#post-header-div">Posts</a></li>
           <li><a href="{% url 'post-create' %}">Create</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="{% url 'login' %}">Login/Signup</a></li>
+          
+          {% if user.is_authenticated %}
+             
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+
+            {% else %}
+
+            <li><a href="{% url 'login' %}">Login/Signup</a></li>
+          {% endif %}
+              
+          
       
       
       
