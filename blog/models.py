@@ -1,7 +1,7 @@
 from distutils.command.upload import upload
 from operator import mod
-from statistics import mode
-from turtle import title
+
+
 from django.db import models
 from psycopg2 import Timestamp
 from django.utils import timezone

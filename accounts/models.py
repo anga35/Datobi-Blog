@@ -1,5 +1,4 @@
 import email
-from re import T
 import django
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser,User,PermissionsMixin,BaseUserManager
