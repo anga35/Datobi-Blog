@@ -10,7 +10,7 @@ cffi==1.15.0
 charset-normalizer==2.0.12
 cryptography==37.0.2
 defusedxml==0.7.1
-Django @ file:///tmp/build/80754af9/django_1625585912945/work
+Django
 django-allauth==0.50.0
 django-ckeditor==6.4.0
 django-cors-headers==3.11.0
