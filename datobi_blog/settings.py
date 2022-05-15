@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-3tr+k==6zv7$@=!5h-tc_83c*-3wo06&!45l!nilu#m!#&lz=)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://datobi-blog-app.herokuapp.com/']
 
 
 # Application definition
