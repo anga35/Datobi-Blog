@@ -19,7 +19,7 @@ django-storages==1.12.3
 djangorestframework==3.13.1
 djangorestframework-simplejwt==5.1.0
 Faker==13.3.4
-flake8 @ file:///opt/conda/conda-bld/flake8_1648129545443/work
+flake8
 google-api-core==2.7.3
 google-api-python-client==2.47.0
 google-auth==2.6.6
