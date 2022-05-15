@@ -1,0 +1,1 @@
+web: gunicorn datobi_blog.wsgi
