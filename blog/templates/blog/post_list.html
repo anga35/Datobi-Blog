@@ -18,7 +18,7 @@
 
 <body>
 
-    <div style="position: relative; height: 50rem;">
+    <div style="position: relative">
         <img src="{% static 'david-unsplash.jpg' %}" style="object-fit:fill; height: 100%; width:100%;position: absolute;  
         " alt="">  
       <header style="position: relative;">
@@ -115,7 +115,7 @@
         <a href="{% url 'post-detail' pk=post.pk %}" style="display: flex; flex-direction: row;" >
 
 
-        <div style="display:block; line-height: 20px; margin-left: 30px; width: 500px">
+        <div style="display:block; line-height: 20px; margin-left: 30px; width: 30rem">
             <h5  id="post-author" >By {{post.user.fullname}}</h5>
      
             <div style="display: inline;">

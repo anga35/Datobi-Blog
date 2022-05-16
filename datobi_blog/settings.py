@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-3tr+k==6zv7$@=!5h-tc_83c*-3wo06&!45l!nilu#m!#&lz=)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+#
 ALLOWED_HOSTS = ['datobi-blog-app.herokuapp.com']
 
 
@@ -131,7 +131,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT=STATIC_DIR
-
+#STATICFILES_DIRS=[STATIC_DIR]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
@@ -160,6 +160,7 @@ CKEDITOR_SETTINGS = {
 }
 
 
+
 AWS_ACCESS_KEY_ID=os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY=os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME=os.environ.get('AWS_STORAGE_BUCKET_NAME')
@@ -169,3 +170,6 @@ AWS_DEFAULT_ACL=None
 DEFAULT_FILE_STORAGE='storages.backends.s3boto3.S3Boto3Storage'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 AWS_S3_REGION_NAME = 'eu-west-2'   
+
+
+
