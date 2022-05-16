@@ -10,6 +10,11 @@ from django.urls import reverse
 from accounts.models import User
 
 # Create your models here.
+
+
+
+
+
 class Post(models.Model):
     title=models.CharField(max_length=120)
     content=RichTextField(blank=True,null=True)
@@ -18,6 +23,8 @@ class Post(models.Model):
     publish_date=models.DateTimeField(null=True,blank=True)
     image=models.ImageField(upload_to='post_thumbnail',null=True)
     user=models.ForeignKey(User,related_name='posts',on_delete=models.SET_NULL,null=True,blank=True)
+
+
 
     def __str__(self) -> str:
         return self.title

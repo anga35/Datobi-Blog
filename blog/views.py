@@ -1,6 +1,6 @@
 
 
-from turtle import pos
+
 from typing import Any
 from webbrowser import get
 
@@ -8,7 +8,7 @@ from django.http import Http404, HttpRequest, HttpResponse
 from django.urls import  reverse_lazy
 from requests import delete, request
 from blog.models import Post
-from pyexpat import model
+
 from tempfile import template
 from django.shortcuts import render
 from django.views.generic import TemplateView,DetailView,CreateView,ListView,UpdateView,DeleteView
