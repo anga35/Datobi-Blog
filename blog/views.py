@@ -4,7 +4,7 @@
 from typing import Any
 from webbrowser import get
 
-from django.http import Http404, HttpRequest, HttpResponse
+from django.http import Http404, HttpRequest, HttpResponse, HttpResponseRedirect
 from django.urls import  reverse_lazy
 from requests import delete, request
 from blog.models import Post
@@ -30,6 +30,7 @@ class PostCreateView(LoginRequiredMixin,CreateView):
         post=form.save(commit=False)
         post.user=self.request.user
         post.save()
+        return HttpResponseRedirect(self.get_success_url())
 
         
 
