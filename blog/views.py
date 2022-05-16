@@ -28,7 +28,7 @@ class PostCreateView(LoginRequiredMixin,CreateView):
         super().form_valid(form)
 
         post=form.save(commit=False)
-        post.user=request.user
+        post.user=self.request.user
         post.save()
 
         
