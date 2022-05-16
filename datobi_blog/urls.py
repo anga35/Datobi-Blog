@@ -19,11 +19,11 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.auth import views
 from accounts.views import LoginView,LogoutView,SignUpView
-
+from blog.views import PostListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
+    path('all/',PostListView.as_view(),name='post-list'),
     path('post/',include('blog.urls')),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
