@@ -23,7 +23,7 @@ from blog.views import PostListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('all/',PostListView.as_view(),name='post-list'),
+    path('',PostListView.as_view(),name='post-list'),
     path('post/',include('blog.urls')),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
