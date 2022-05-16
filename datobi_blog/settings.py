@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-3tr+k==6zv7$@=!5h-tc_83c*-3wo06&!45l!nilu#m!#&lz=)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-#
-ALLOWED_HOSTS = ['datobi-blog-app.herokuapp.com']
+#'datobi-blog-app.herokuapp.com'
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -130,10 +130,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT=STATIC_DIR
-#STATICFILES_DIRS=[STATIC_DIR]
+#STATIC_ROOT=STATIC_DIR
+STATICFILES_DIRS=[STATIC_DIR]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_ROOT=MEDIA_DIR
 MEDIA_URL='/media/'
@@ -160,7 +160,7 @@ CKEDITOR_SETTINGS = {
 }
 
 
-
+'''
 AWS_ACCESS_KEY_ID=os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY=os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME=os.environ.get('AWS_STORAGE_BUCKET_NAME')
@@ -169,7 +169,10 @@ AWS_S3_FILE_OVERWRITE=False
 AWS_DEFAULT_ACL=None
 DEFAULT_FILE_STORAGE='storages.backends.s3boto3.S3Boto3Storage'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
-AWS_S3_REGION_NAME = 'eu-west-2'   
+AWS_S3_REGION_NAME = 'eu-west-2'  
+
+'''
+ 
 
 
 
