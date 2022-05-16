@@ -1,11 +1,12 @@
 
 
+from turtle import pos
 from typing import Any
 from webbrowser import get
 
 from django.http import Http404, HttpRequest, HttpResponse
 from django.urls import  reverse_lazy
-from requests import delete
+from requests import delete, request
 from blog.models import Post
 from pyexpat import model
 from tempfile import template
@@ -21,6 +22,17 @@ class PostCreateView(LoginRequiredMixin,CreateView):
     form_class=PostForm
     login_url='/login/'
     redirect_field_name='next'
+
+
+    def form_valid(self, form):
+        super().form_valid(form)
+
+        post=form.save(commit=False)
+        post.user=request.user
+        post.save()
+
+        
+
 
 
 class PostDetailView(DetailView):

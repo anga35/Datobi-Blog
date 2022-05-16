@@ -1,5 +1,4 @@
-import email
-import re
+
 from urllib.parse import urlencode
 from django.urls import reverse
 from django.shortcuts import render,redirect
