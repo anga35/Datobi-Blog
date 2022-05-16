@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'storages' #Django Storages for AWS
 ]
 
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -56,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'datobi_blog.urls'
@@ -130,6 +133,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT=STATIC_DIR
 
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_ROOT=MEDIA_DIR
 MEDIA_URL='/media/'
