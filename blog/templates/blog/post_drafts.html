@@ -19,7 +19,7 @@
     <div style="display: inline;">
         <h3  id="post-title">{{post.title}}
              <a href="{% url 'post-publish' pk=post.pk %}"><i class="fa-regular fa-circle-check fa-lg" style="margin-left: 6rem;"></i></a>
-             <a href="#"><i class="fa-regular fa-circle-xmark fa-lg"style="margin-left: 1rem;" ></i></a>
+             <a href="{% url 'post-disapprove' pk=post.pk  %}"><i class="fa-regular fa-circle-xmark fa-lg"style="margin-left: 1rem;" ></i></a>
             </h3>
        
     

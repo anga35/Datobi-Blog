@@ -5,7 +5,7 @@ from typing import Any
 from webbrowser import get
 
 from django.http import Http404, HttpRequest, HttpResponse, HttpResponseRedirect
-from django.urls import  reverse_lazy
+from django.urls import  reverse_lazy,reverse
 from requests import delete, request
 from blog.models import Post
 
@@ -107,3 +107,11 @@ def publish(request,**kwargs):
     post.publish()
     return redirect('post-list')
 
+def disapprove(request,**kwargs):
+    if(not request.user.is_superuser):
+        raise Http404
+
+    pk=kwargs['pk']
+    post=Post.objects.get(pk=pk)
+    post.delete()
+    return redirect('post-drafts')
